@@ -17,7 +17,7 @@ let currentIndex = 0;
                     .then(data => {
                         /* Use the array variable to store the gifs */ = data.results;
                         currentIndex = 0;
-                        updateDisplay();
+                        /* Call the function to updateDisplay */
                     })
                     .catch(error => {
                         console.error('Error fetching GIFs:', error);
@@ -48,13 +48,13 @@ let currentIndex = 0;
         document.getElementById('prevButton').addEventListener('click', function() {
             if (currentIndex > 0) {
                 currentIndex--;
-                updateDisplay();
+                /* Call the function to updateDisplay */
             }
         });
 
         document.getElementById('nextButton').addEventListener('click', function() {
             if (currentIndex < gifs.length - 1) {
                 currentIndex++;
-                updateDisplay();
+                /* Call the function to updateDisplay */
             }
         });
